@@ -1,0 +1,13 @@
+pandas
+numpy
+requests
+matplotlib
+seaborn
+statsmodels
+scikit-learn
+tensorflow
+nltk
+vaderSentiment
+streamlit
+praw
+plotly
