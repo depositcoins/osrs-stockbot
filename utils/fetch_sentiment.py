@@ -5,9 +5,9 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # Set up Reddit API credentials (replace with your actual credentials)
 reddit = praw.Reddit(
-    client_id="YOUR_CLIENT_ID",
-    client_secret="YOUR_CLIENT_SECRET",
-    user_agent="osrs-stockbot by /u/YOUR_USERNAME"
+    client_id="VG67ZjFUlHI-mAWwwqYMtQ",
+    client_secret="lpI2u_9GrmzduNfktRaXBAV3OaIvNA",
+    user_agent="osrs-stockbot by /u/SwimmingOk9450"
 )
 
 def fetch_reddit_sentiment(query="oathplate chest", subreddit="2007scape", limit=100):

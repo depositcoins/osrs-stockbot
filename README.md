@@ -15,7 +15,7 @@ Forecast Old School RuneScape item prices using time-series analysis, deep learn
 ## 🛠️ Setup
 
 ```bash
-git clone https://github.com/yourusername/osrs-stockbot.git
+git clone https://github.com/depositcoins/osrs-stockbot.git
 cd osrs-stockbot
 pip install -r requirements.txt
 ```
