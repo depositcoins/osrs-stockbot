@@ -63,8 +63,8 @@ with col1:
 
 with col2:
   # --- Price History Section ---
-st.markdown("---")
-st.header("📈 Price History")
+    st.markdown("---")
+    st.header("📈 Price History")
 
 with st.spinner("Fetching timeseries data..."):
     import traceback
