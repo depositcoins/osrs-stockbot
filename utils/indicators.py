@@ -1,11 +1,3 @@
-# ensure repo root is on sys.path so "utils" is importable
-import os, sys
-_APP_DIR = os.path.dirname(__file__)
-_REPO_ROOT = os.path.abspath(os.path.join(_APP_DIR, ".."))
-if _REPO_ROOT not in sys.path:
-    sys.path.insert(0, _REPO_ROOT)
-
-
 import pandas as pd
 import numpy as np
 
