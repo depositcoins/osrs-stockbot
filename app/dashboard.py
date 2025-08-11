@@ -62,12 +62,22 @@ with col1:
         st.warning("No live price returned for this item.")
 
 with col2:
-    st.subheader("📈 Price History")
+    # app/dashboard.py (inside the "Price History" section)
+
+import traceback
+st.subheader("📈 Price History")
+ts = pd.DataFrame()
+try:
     ts = get_timeseries(item_id, timestep=timestep)
-    if not ts.empty:
-        st.line_chart(ts.set_index("timestamp")[["avgHighPrice", "avgLowPrice"]])
-    else:
-        st.info("No timeseries data returned for this item/timestep.")
+except Exception as e:
+    st.warning("The Wiki API refused the timeseries request. Retrying later usually works.")
+    st.caption(str(e))
+
+if not ts.empty:
+    st.line_chart(ts.set_index("timestamp")[["avgHighPrice", "avgLowPrice"]])
+else:
+    st.info("No timeseries data returned (API rate limit or no data for this interval).")
+
 
 if show_latest_table:
     ids = mapping_df[mapping_df["name"].isin(matches)]["id"].astype(int).tolist()
