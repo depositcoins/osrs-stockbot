@@ -1,3 +1,12 @@
+# --- path shim so we can import ../utils ---
+import os, sys
+_APP_DIR = os.path.dirname(__file__)
+_REPO_ROOT = os.path.abspath(os.path.join(_APP_DIR, ".."))
+if _REPO_ROOT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT)
+# -------------------------------------------
+
+
 import streamlit as st
 import pandas as pd
 from difflib import get_close_matches
