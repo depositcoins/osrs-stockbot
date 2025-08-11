@@ -61,7 +61,7 @@ with col1:
     else:
         st.warning("No live price returned for this item.")
 
-with col2:
+    with col2:
    # --- Price History Section ---
 st.markdown("---")
 st.header("📈 Price History")
