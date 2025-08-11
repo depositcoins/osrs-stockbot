@@ -137,19 +137,6 @@ with col2:
         st.caption(str(e))
 
 
-    # Live Price section
-st.subheader("💹 Live Price")
-col1, col2 = st.columns(2)
-col1.metric("Instant Buy (high)", f"{latest['high']:,} gp")
-col2.metric("Instant Sell (low)", f"{latest['low']:,} gp")
-
-# Calculate margin
-margin = latest['high'] - latest['low']
-margin_pct = (margin / latest['low']) * 100 if latest['low'] != 0 else 0
-
-st.write(f"**Margin:** {margin:,} gp")
-st.write(f"**Margin %:** {margin_pct:.2f}%")
-
 
 
     if not ts.empty:
